@@ -13,6 +13,8 @@ const AppProvider = ({ children }) => {
 	const [activeDonation, setActiveDonation] = useState("");
 	const [date, setDate] = useState("");
 	const [dateObj, setDateObj] = useState({ year: "", month: "", day: "" });
+	const [isCompleted, setIsCompleted] = useState(false);
+	const [activeDonationId, setActiveDonationId] = useState("");
 
 	const scrollIntoView = (id) => {
 		document.getElementById(id).scrollIntoView();
@@ -21,7 +23,7 @@ const AppProvider = ({ children }) => {
 	const getDonation = async () => {
 		const token = localStorage.getItem("token");
 		const id = JSON.parse(localStorage.getItem("user"))?.userID;
-
+		setLoading(true);
 		try {
 			const { data } = await axios.get(
 				`${baseURL}/schedules?filters[userId][$eq]=${
@@ -35,14 +37,18 @@ const AppProvider = ({ children }) => {
 			);
 
 			setTotalDonations(data.data.length);
+			getActiveDonation();
+			setLoading(false);
 		} catch (error) {
 			console.log(error);
+			setLoading(false);
 		}
 	};
 
 	const getActiveDonation = async () => {
 		const token = localStorage.getItem("token");
-		const id = JSON.parse(localStorage.getItem("user")).userID;
+		const id = JSON.parse(localStorage.getItem("user")).userID || 0;
+		setLoading(true);
 
 		try {
 			const { data } = await axios.get(
@@ -63,13 +69,69 @@ const AppProvider = ({ children }) => {
 			} else {
 				return [];
 			}
+			setLoading(false);
 		} catch (error) {
 			console.log(error);
+			setLoading(false);
+		}
+	};
+
+	const setCompletedToTrue = async (e) => {
+		const token = localStorage.getItem("token");
+		const id = activeDonation[0].id;
+		setLoading(false);
+		try {
+			await axios.put(
+				`${baseURL}/schedules/${id}`,
+				{
+					data: { completed: true },
+				},
+				{
+					headers: {
+						Authorization: `Bearer ${token}`,
+					},
+				}
+			);
+			getActiveDonation();
+			getDonation();
+			setIsCompleted(true);
+			setActiveDonationId(id);
+			setLoading(false);
+		} catch (error) {
+			console.log(error);
+			setLoading(false);
+		}
+	};
+	const setCompletedToFalse = async (e) => {
+		const token = localStorage.getItem("token");
+
+		setLoading(false);
+		try {
+			await axios.put(
+				`${baseURL}/schedules/${activeDonationId}`,
+				{
+					data: { completed: false },
+				},
+				{
+					headers: {
+						Authorization: `Bearer ${token}`,
+					},
+				}
+			);
+			getActiveDonation();
+			getDonation();
+			setIsCompleted(false);
+			setActiveDonationId("");
+			setLoading(false);
+		} catch (error) {
+			console.log(error);
+			setLoading(false);
 		}
 	};
 
 	useEffect(() => {
 		getActiveDonation();
+		getDonation();
 	}, []);
 
 	useEffect(() => {
@@ -97,6 +159,11 @@ const AppProvider = ({ children }) => {
 				getDonation,
 				activeDonation,
 				dateObj,
+				getActiveDonation,
+				setCompletedToTrue,
+				isCompleted,
+				setIsCompleted,
+				setCompletedToFalse,
 			}}
 		>
 			{children}

@@ -24,7 +24,8 @@ const navVariants = {
 };
 
 const ScheduleModal = () => {
-	const { isAddEvent, setIsAddEvent, baseURL } = useGlobalContext();
+	const { isAddEvent, setIsAddEvent, baseURL, getActiveDonation } =
+		useGlobalContext();
 	const [date, setDate] = useState("");
 	const [name, setName] = useState("");
 
@@ -58,12 +59,11 @@ const ScheduleModal = () => {
 			);
 
 			setIsAddEvent(false);
+			getActiveDonation();
 			e.target.reset();
 		} catch (error) {
 			console.log(error);
 		}
-
-		getActiveDonation();
 	};
 
 	return (

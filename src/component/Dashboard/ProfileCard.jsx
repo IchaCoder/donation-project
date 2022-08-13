@@ -3,7 +3,8 @@ import { FaDonate } from "react-icons/all";
 import { useGlobalContext } from "../../context";
 
 const ProfileCard = () => {
-	const { totalDonations, activeDonation, dateObj } = useGlobalContext();
+	const { totalDonations, activeDonation, dateObj, setCompletedToTrue } =
+		useGlobalContext();
 
 	// const getDate = (year, month, day) => {};
 	// console.log(schedule);
@@ -17,13 +18,13 @@ const ProfileCard = () => {
 						<p className="font-bold text-2xl text-primary mt-4">
 							{new Date(
 								dateObj.year,
-								dateObj.month,
+								dateObj.month - 1,
 								dateObj.day
 							).toDateString()}
 						</p>
 						<div className="card text-xs pt-4">
 							Completed
-							<input type="checkbox" />
+							<input type="checkbox" onClick={(e) => setCompletedToTrue(e)} />
 						</div>
 					</>
 				) : (

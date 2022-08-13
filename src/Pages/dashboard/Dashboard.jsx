@@ -6,7 +6,7 @@ import ProfileCard from "../../component/Dashboard/ProfileCard";
 import ScheduleModal from "../../component/Dashboard/ScheduleModal";
 import "./dashboard.css";
 import { useGlobalContext } from "../../context";
-import axios from "axios";
+import Completed from "../../component/Dashboard/Completed";
 
 const Dashboard = () => {
 	const navigate = useNavigate();
@@ -39,6 +39,7 @@ const Dashboard = () => {
 					Make a Schedule
 				</button>
 			</div>
+			<Completed />
 			<ProfileCard />
 			<ScheduleModal />
 		</>
