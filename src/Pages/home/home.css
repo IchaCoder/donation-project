@@ -1,0 +1,57 @@
+.donate_btn,
+.donate_btn2 {
+	letter-spacing: 0.2rem;
+	height: 40px;
+	margin-top: 10px;
+	transition: var(--transition);
+}
+
+.donate_btn:hover {
+	background: var(--theme-clr-two-variant);
+}
+
+.hero_section {
+	padding-top: 50%;
+}
+
+h1,
+h2 {
+	letter-spacing: 0.2rem;
+	line-height: 0.2rem;
+}
+
+.hero_home {
+	background: linear-gradient(
+		to right,
+		var(--theme-clr-one),
+		var(--theme-clr-two)
+	);
+	padding: 70px 0;
+	/* height: 60vh; */
+	height: fit-content;
+}
+
+.donate_btn_two {
+	margin-top: 3rem;
+}
+
+.card {
+	letter-spacing: 0.2rem;
+}
+
+.letter_head {
+	background: rgb(22, 22, 22);
+	box-shadow: inset 0 0 0 2px white;
+	transform: translate(50%, 50%);
+	right: 50%;
+}
+
+footer > div > div {
+	transition: var(--transition);
+}
+
+@media (min-width: 768px) {
+	.hero_section {
+		padding-top: 15%;
+	}
+}
