@@ -55,3 +55,16 @@ footer > div > div {
 		padding-top: 15%;
 	}
 }
+
+@media (max-width: 350px) {
+	.sub {
+		width: 90px;
+		font-size: 13px;
+	}
+	.input_sub {
+		width: 150px;
+	}
+	.input_sub_two {
+		width: 100%;
+	}
+}

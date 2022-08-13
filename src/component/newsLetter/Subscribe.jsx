@@ -30,7 +30,7 @@ const Subscribe = () => {
 					type="email"
 					name="email"
 					placeholder="Your email address"
-					className={`rounded flex-1 self-end h-10 placeholder:pl-4 text-black ${
+					className={`rounded flex-1 self-end h-10 placeholder:pl-4 text-black input_sub ${
 						formik.touched.email &&
 						formik.errors.email &&
 						"border-2 border-solid border-secondary"
@@ -40,7 +40,7 @@ const Subscribe = () => {
 					value={formik.values.email}
 				/>
 
-				<button className="donate_btn donate_btn_two ml-2 md:block uppercase px-3 text-white bg-secondary rounded-lg ">
+				<button className="donate_btn donate_btn_two ml-2 md:block p-2 text-white bg-secondary rounded-lg sub">
 					subscribe
 				</button>
 			</div>

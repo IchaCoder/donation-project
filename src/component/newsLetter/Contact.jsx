@@ -22,7 +22,7 @@ const Contact = () => {
 						name="name"
 						autoComplete="false"
 						placeholder="Enter Username (not required)"
-						className="p-2 rounded-md input text-black"
+						className="p-2 rounded-md input text-black input_sub_two"
 					/>
 
 					<input
@@ -30,7 +30,7 @@ const Contact = () => {
 						name="email"
 						autoComplete="false"
 						placeholder="Enter Email"
-						className="p-2 rounded-md mt-4 input text-black"
+						className="p-2 rounded-md mt-4 input text-black input_sub_two"
 						required
 					/>
 
@@ -38,7 +38,7 @@ const Contact = () => {
 						cols="30"
 						rows="10"
 						name="message"
-						className="p-2 mt-4 rounded-md input text-black"
+						className="p-2 mt-4 rounded-md input text-black input_sub_two"
 						placeholder="Enter message"
 						required
 					/>
