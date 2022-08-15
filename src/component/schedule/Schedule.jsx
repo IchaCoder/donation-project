@@ -15,7 +15,6 @@ const Schedule = () => {
 				const date = new Date(event[0], event[1] - 1, event[2]).toDateString();
 				setDate(date);
 				setVenue(data.data.attributes.venue);
-				console.log(data);
 			} else {
 				setDate("");
 				setVenue("");
