@@ -5,7 +5,7 @@ import Loading from "./component/Loading";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-	const baseURL = "http://localhost:1337/api";
+	const baseURL = "https://yaalika.herokuapp.com/api";
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [isAddEvent, setIsAddEvent] = useState(false);
 	const [loading, setLoading] = useState(false);

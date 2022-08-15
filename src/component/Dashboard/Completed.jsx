@@ -8,9 +8,6 @@ const Completed = () => {
 		const timeout = setTimeout(() => {
 			setIsCompleted(false);
 		}, 3000);
-		return () => {
-			clearTimeout(timeout);
-		};
 	}, []);
 
 	return (

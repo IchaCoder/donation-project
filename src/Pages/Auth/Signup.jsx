@@ -6,7 +6,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const Signup = () => {
-	const { baseURL, setLoading } = useGlobalContext();
+	const { baseURL, setLoading, getDonation } = useGlobalContext();
 	const navigate = useNavigate();
 
 	const formik = useFormik({
