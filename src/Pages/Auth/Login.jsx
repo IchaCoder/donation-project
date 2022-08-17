@@ -45,22 +45,6 @@ const Login = () => {
 		},
 	});
 
-	// const handleSubmit = async (e) => {
-	// 	e.preventDefault();
-	// 	setLoading(true);
-	// 	try {
-	// 		const { data } = await axios.post(
-	// 			"http://localhost:1337/api/auth/local",
-	// 			{
-	// 				identifier: email,
-	// 				password,
-	// 			}
-	// 		);
-	// 	} catch (error) {
-	// 		console.log(error);
-	// 	}
-	// };
-
 	return (
 		<div className="">
 			<form
@@ -111,6 +95,14 @@ const Login = () => {
 					</Link>{" "}
 				</div>
 			</form>
+			<div className="flex justify-center mr-4 w-full md:mr-20">
+				<button
+					className="donate_btn md:block uppercase px-8 text-white bg-primary rounded-lg"
+					onClick={() => navigate("/")}
+				>
+					go home
+				</button>
+			</div>
 		</div>
 	);
 };
