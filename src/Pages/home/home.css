@@ -46,7 +46,7 @@ h2 {
 	right: 50%;
 }
 
-footer > div > div {
+.footer {
 	transition: var(--transition);
 }
 

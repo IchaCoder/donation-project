@@ -13,37 +13,37 @@ const Footer = () => {
 			<section className=" md:ml-52 flex-[0.8] md:flex">
 				<div className="flex-[0.8]">
 					<div
-						className="cursor-pointer p-2 tracking-widest text-center md:text-left text-lg hover:bg-white"
+						className="footer cursor-pointer p-2 tracking-widest text-center md:text-left text-base md:text-lg hover:bg-white"
 						onClick={() => scrollIntoView("home")}
 					>
 						Home
 					</div>
 					<div
-						className="cursor-pointer p-2 text-center tracking-widest text-lg md:text-left hover:bg-white"
+						className="footer cursor-pointer p-2 text-center tracking-widest text-base md:text-lg md:text-left hover:bg-white"
 						onClick={() => scrollIntoView("about")}
 					>
 						About
 					</div>
 					<div
-						className="cursor-pointer p-2 text-center tracking-widest text-lg md:text-left hover:bg-white"
+						className="footer cursor-pointer p-2 text-center tracking-widest text-base md:text-lg md:text-left hover:bg-white"
 						onClick={() => scrollIntoView("home")}
 					>
 						Mission
 					</div>
 					<div
-						className="cursor-pointer p-2 text-center tracking-widest text-lg md:text-left hover:bg-white"
+						className="footer cursor-pointer p-2 text-center tracking-widest text-base md:text-lg md:text-left hover:bg-white"
 						onClick={() => scrollIntoView("contact")}
 					>
 						Contact
 					</div>
 					<div
-						className="cursor-pointer p-2 text-center tracking-widest text-lg md:text-left hover:bg-white"
+						className="footer cursor-pointer p-2 text-center tracking-widest text-base md:text-lg md:text-left hover:bg-white"
 						onClick={() => scrollIntoView("subscribe")}
 					>
 						Subscribe
 					</div>
 					<div
-						className="cursor-pointer p-2 text-center tracking-widest text-lg md:text-left hover:bg-white"
+						className="footer cursor-pointer p-2 text-center tracking-widest text-base md:text-lg md:text-left hover:bg-white"
 						onClick={() => navigate("/dashboard")}
 					>
 						Get involved

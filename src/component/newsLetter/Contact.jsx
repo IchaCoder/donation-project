@@ -11,7 +11,7 @@ const Contact = () => {
 				onSubmit={handleSubmit}
 			>
 				<h2
-					className="text-3xl text-center my-6 text-white font-bold"
+					className="text-3xl text-center my-6 text-white font-semibold"
 					id="contact"
 				>
 					Write to us

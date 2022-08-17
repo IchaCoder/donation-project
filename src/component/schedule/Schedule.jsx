@@ -1,6 +1,7 @@
 import React from "react";
 import { useGlobalContext } from "../../context";
 import axios from "axios";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Schedule = () => {
 	const { scrollIntoView, baseURL } = useGlobalContext();
@@ -33,7 +34,10 @@ const Schedule = () => {
 
 	return (
 		<div className="md:flex justify-center mt-44">
-			<div className="card rounded-lg text-center mx-auto md:mx-5 w-[90%] md:w-2/5 h-64 text-white text-xl bg-secondary p-2 flex flex-col place-content-center">
+			<ScrollAnimation
+				animateIn="animate__bounceInLeft"
+				className="card rounded-lg text-center mx-auto md:mx-5 w-[90%] md:w-2/5 h-64 text-white text-xl bg-secondary p-2 flex flex-col place-content-center"
+			>
 				<div>Subscribe to get notification on new developments</div>
 				<button
 					onClick={() => scrollIntoView("subscribe")}
@@ -41,8 +45,11 @@ const Schedule = () => {
 				>
 					Subscribe
 				</button>
-			</div>
-			<div className="card rounded-lg mx-auto  w-[90%] md:mx-5 md:w-2/5 h-max md:h-64 text-white text-xl bg-primary p-4 flex flex-col place-content-center text-center">
+			</ScrollAnimation>
+			<ScrollAnimation
+				animateIn="animate__bounceInRight"
+				className="card rounded-lg mx-auto  w-[90%] md:mx-5 md:w-2/5 h-max md:h-64 text-white text-xl bg-primary p-4 flex flex-col place-content-center text-center"
+			>
 				<div>Our next outreach event is on:</div>
 				{date ? (
 					<>
@@ -52,7 +59,7 @@ const Schedule = () => {
 				) : (
 					<div className="text-3xl">Yet to Determined </div>
 				)}
-			</div>
+			</ScrollAnimation>
 		</div>
 	);
 };
