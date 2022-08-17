@@ -37,7 +37,7 @@ const Schedule = () => {
 				<div>Subscribe to get notification on new developments</div>
 				<button
 					onClick={() => scrollIntoView("subscribe")}
-					className="donate_btn max-w-[50%] mx-auto donate_btn_two  md:block uppercase px-2  bg-primary rounded-lg"
+					className="donate_btn max-w-[50%] mx-auto donate_btn_two  md:block px-8  bg-primary rounded-lg"
 				>
 					Subscribe
 				</button>

@@ -25,12 +25,12 @@ const Subscribe = () => {
 					{formik.errors.email}
 				</div>
 			) : null}
-			<div className="flex max-w-[90%] mx-auto justify-center -mt-4">
+			<div className="flex flex-col xs:flex-row max-w-[90%] mx-auto justify-center xs:gap-3">
 				<input
 					type="email"
 					name="email"
 					placeholder="Your email address"
-					className={`rounded flex-1 self-end h-10 placeholder:pl-4 text-black input_sub ${
+					className={`rounded flex-1 self-end h-10 placeholder:pl-4 text-black mt-6 xs:mt-0 w-full p-2 ${
 						formik.touched.email &&
 						formik.errors.email &&
 						"border-2 border-solid border-secondary"
@@ -40,7 +40,7 @@ const Subscribe = () => {
 					value={formik.values.email}
 				/>
 
-				<button className="donate_btn donate_btn_two ml-2 md:block p-2 text-white bg-secondary rounded-lg sub">
+				<button className="donate_btn donate_btn_two mx-auto xs:mx-0 md:block p-2 text-white bg-secondary rounded-lg sub">
 					subscribe
 				</button>
 			</div>

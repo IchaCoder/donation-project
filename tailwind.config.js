@@ -12,6 +12,9 @@ module.exports = {
 			height: {
 				slice: "32rem",
 			},
+			screens: {
+				xs: "320px",
+			},
 		},
 	},
 	plugins: [],
