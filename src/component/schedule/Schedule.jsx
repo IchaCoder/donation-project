@@ -53,8 +53,10 @@ const Schedule = () => {
 				<div>Our next outreach event is on:</div>
 				{date ? (
 					<>
-						<p className="text-3xl">Date: {date}</p>
-						<p className="text-3xl">Venue: {venue}</p>
+						<div className="pt-4 text-base">Date:</div>
+						<p className="text-3xl">{date}</p>
+						<div className="pt-4">Venue:</div>
+						<p className="text-3xl">{venue}</p>
 					</>
 				) : (
 					<div className="text-3xl">Yet to Determined </div>

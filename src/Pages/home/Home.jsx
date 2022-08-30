@@ -7,6 +7,8 @@ import Schedule from "../../component/schedule/Schedule";
 import About from "../../component/about/About";
 import NewsLetter from "../../component/newsLetter/NewsLetter";
 import Footer from "../../component/Footer/Footer";
+import SubscribeModal from "../../component/newsLetter/SubscribeModal";
+import ContactModal from "../../component/newsLetter/ContactModal.jsx";
 
 const Home = () => {
 	const navigate = useNavigate();
@@ -30,6 +32,8 @@ const Home = () => {
 			<About />
 			<NewsLetter />
 			<Footer />
+			<SubscribeModal />
+			<ContactModal />
 		</div>
 	);
 };
