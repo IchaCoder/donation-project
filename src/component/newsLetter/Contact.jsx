@@ -1,8 +1,11 @@
 import React from "react";
+import { useGlobalContext } from "../../context";
 
 const Contact = () => {
+	const { setIsMessageSent } = useGlobalContext();
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		setIsMessageSent(true);
 	};
 	return (
 		<div className="mt-20">

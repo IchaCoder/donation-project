@@ -1,7 +1,6 @@
-/** @format */
-
 module.exports = {
 	content: ["./src/**/*.{html,jsx}"],
+	plugins: [require("daisyui")],
 	theme: {
 		extend: {
 			colors: {

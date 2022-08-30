@@ -15,6 +15,8 @@ const AppProvider = ({ children }) => {
 	const [dateObj, setDateObj] = useState({ year: "", month: "", day: "" });
 	const [isCompleted, setIsCompleted] = useState(false);
 	const [activeDonationId, setActiveDonationId] = useState("");
+	const [isSubscribed, setIsSubscribed] = useState(false);
+	const [isMessageSent, setIsMessageSent] = useState(false);
 
 	const scrollIntoView = (id) => {
 		document.getElementById(id).scrollIntoView();
@@ -164,6 +166,10 @@ const AppProvider = ({ children }) => {
 				isCompleted,
 				setIsCompleted,
 				setCompletedToFalse,
+				isSubscribed,
+				setIsSubscribed,
+				isMessageSent,
+				setIsMessageSent,
 			}}
 		>
 			{children}

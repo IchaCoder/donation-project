@@ -599,6 +599,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 2rem;
 }
 
+.mt-\[50\%\] {
+  margin-top: 50%;
+}
+
+.mt-\[300px\] {
+  margin-top: 300px;
+}
+
+.mt-\[250px\] {
+  margin-top: 250px;
+}
+
 .block {
   display: block;
 }
@@ -1093,6 +1105,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.hover\:text-red-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
 .hover\:opacity-80:hover {
   opacity: 0.8;
 }
@@ -1175,6 +1192,18 @@ Ensure the default browser behavior of the `hidden` attribute.
     justify-content: center;
   }
 
+  .md\:p-16 {
+    padding: 4rem;
+  }
+
+  .md\:p-12 {
+    padding: 3rem;
+  }
+
+  .md\:p-10 {
+    padding: 2.5rem;
+  }
+
   .md\:pt-12 {
     padding-top: 3rem;
   }
@@ -1195,6 +1224,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 

@@ -2,8 +2,11 @@ import React from "react";
 import { FiMail } from "react-icons/fi";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useGlobalContext } from "../../context";
 
 const Subscribe = () => {
+	const { setIsSubscribed } = useGlobalContext();
+
 	const formik = useFormik({
 		initialValues: {
 			email: "",
@@ -13,7 +16,7 @@ const Subscribe = () => {
 		}),
 		onSubmit: ({ email }, { resetForm }) => {
 			console.log(email);
-
+			setIsSubscribed(true);
 			resetForm();
 		},
 	});
